@@ -3,23 +3,19 @@ public class main {
     public static void main(String[] args) {
         //shopping cart
         Scanner scanner = new Scanner(System.in);
-        String item;
-        Double price;
-        Integer quantity;
 
-        // Create a shopping cart
-        System.out.println("enter the number of items in the cart");
-        item = scanner.nextLine();
-        System.out.println("enter the price of the item");
-        price = scanner.nextDouble();
-        System.out.println("enter the quantity of the item");
-        quantity = scanner.nextInt();
+        Integer num;
+        System.out.print("Enter the number: ");
+        num = scanner.nextInt();
 
+        if (num % 2 == 0) {
+            System.out.println("Even");
+        } else {
+            System.out.println("Odd");
+        }
 
-        double total = price * quantity;
-        System.out.println("The total price of " + item + " is: " + total);
-
-
+        int result = num % 2;
+        System.out.printf("The result is: %d\n", result);
 
         scanner.close();
     }
